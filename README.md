@@ -3,18 +3,20 @@ Esse projeto cria uma instância no Google Cloud Plataform.
 
 ## Diagrama
 
-```
+```mermaid
+
 stateDiagram
-    direction LR
-    [*] --> A
-    A --> B
-    B --> C
-    state B {
-      direction LR
-      a --> b
-    }
-    B --> D
+  direction LR
+  [terraform] --> GCP
+  GCP --> GCE
+
+state GCE {
+  direction LR
+  instance 
+}
+    
 ```
+
 ## Passo a passo
 
 1. Instale a ferramenta terraform na sua máquina.
